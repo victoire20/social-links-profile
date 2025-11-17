@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/static/Inter-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/static/Inter-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --green: hsl(75, 94%, 57%);
+    --gray-700: hsl(0, 0%, 20%);
+    --gray-800: hsl(0, 0%, 12%);
+    --gray-900: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Inter';
+    font-size: 14px;
+    background: var(--gray-900);
+    color: var(--white);    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: var(--gray-800);
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card__header {
+    text-align: center;
+    margin: 5px;
+}
+
+.card__img {
+    border-radius: 50%;
+    width: 90px;
+}
+
+.card__info {
+    margin: 20px 0;
+}
+
+.card__info h1 {
+    margin-bottom: 10px;
+}
+
+.card__info p {
+    color: var(--green);
+}
+
+.card__body {
+    text-align: center;
+}
+
+.social__media {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.social__media__item {
+    background: var(--gray-700);
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.social__media__item:hover a {
+    color: var(--gray-900);
+    font-weight: 700;
+}
+
+.social__media__item:hover {
+    background: var(--green);
+}
+
+.social__media__item,
+.social__media__item a {
+    transition: 0.2s ease-in-out;
+}
+
+.social__media__item a {
+    color: var(--white);
+}
+
+footer {
+    font-size: .6em;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
