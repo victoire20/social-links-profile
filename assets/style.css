@@ -46,7 +46,7 @@ li {
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(14px, 1.2vw, 20px);
+    font-size: clamp(0.875rem, 1.2vw, 1.25rem);
     background: var(--gray-900);
     color: var(--white);    
     height: 100vh;
@@ -60,7 +60,7 @@ body {
     background: var(--gray-800);
     width: 100%;
     max-width: 400px;
-    padding: 20px;
+    padding: min(5vw, 20px);;
     border-radius: 10px;
 }
 
@@ -94,7 +94,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 25px;
+    margin-block-start: 25px;
 }
 
 .social__media__item {
@@ -103,11 +103,6 @@ body {
     padding: 15px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-}
-
-.social__media__item:hover a {
-    color: var(--gray-900);
-    font-weight: 700;
 }
 
 .social__media__item:hover {
@@ -119,6 +114,11 @@ body {
     transition: 0.2s ease-in-out;
 }
 
+.social__media__item:hover a {
+    color: var(--gray-900);
+    font-weight: 700;
+}
+
 footer {
     font-size: .6em;
     margin-top: 40px;
@@ -127,4 +127,12 @@ footer {
 
 .attribution {
     line-height: 1.5;
+}
+
+/* Réduire les animations pour les utilisateurs sensibles */
+@media (prefers-reduced-motion: reduce) {
+    .social__media__item,
+    .social__media__item a {
+        transition: none;
+    }
 }
