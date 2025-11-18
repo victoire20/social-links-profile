@@ -79,7 +79,7 @@ body {
 }
 
 .card__info h1 {
-    margin-block-end: 0.625em;
+    margin-block-end: min(2vw, 0.625em);
 }
 
 .card__info p {
@@ -94,7 +94,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.625em;
-    margin-block-start: 1.563em;
+    margin-block-start: min(2.5vw, 1.563em);
 }
 
 .social__media__item {
@@ -121,7 +121,7 @@ body {
 
 footer {
     font-size: 0.6em;
-    margin-block-start: 2.5em;
+    margin-block-start: min(3.1vw, 2.5em);
     text-align: center;
 }
 
